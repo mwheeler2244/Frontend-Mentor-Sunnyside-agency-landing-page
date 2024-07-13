@@ -1,0 +1,367 @@
+/* utillties class */
+
+:root {
+  --Soft-red: hsl(7, 99%, 70%);
+  --Yellow: hsl(51, 100%, 49%);
+  --graphic-design-text: hsl(167, 40%, 24%);
+  --photography-text: hsl(198, 62%, 26%);
+  --footer: hsl(168, 34%, 41%);
+  --fw-small: 600;
+  --fw-med: 700;
+  --fw-large: 900;
+  --blue-1: hsl(212, 27%, 19%);
+  --Very-dark-grayish-blue: hsl(213, 9%, 39%);
+  --Dark-grayish-blue: hsl(232, 10%, 55%);
+  --Grayish-blue: hsl(210, 4%, 67%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+p {
+  line-height: 2;
+}
+
+body {
+  font-family: "Fraunces", sans-serif;
+  max-width: 1400px;
+  margin-inline: auto;
+}
+
+/*=============== HOME ===============*/
+nav {
+  padding: 2rem 3.5rem;
+}
+.nav__links {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-size: 1.125rem;
+  align-items: center;
+}
+.hamburger {
+  display: none;
+}
+ul {
+  display: flex;
+  color: white;
+  gap: 3.5rem;
+  align-items: center;
+}
+a {
+  color: white;
+}
+.nav__links .btn {
+  color: black;
+  background-color: white;
+  padding: 1rem;
+  align-items: center;
+  border: transparent;
+  border-radius: 20px;
+
+  font-size: 1.125rem;
+}
+.home {
+  background-image: url(./images/desktop/image-header.jpg);
+  background-position: center;
+  background-size: cover;
+  min-height: 90vh;
+}
+.home__title {
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+  letter-spacing: 1rem;
+  padding-top: 5rem;
+}
+.arrow__home {
+  padding-block: 4rem;
+}
+.arrow__home svg {
+  margin-inline: auto;
+}
+
+.services .container {
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(550px, 1fr)); */
+  display: flex;
+  flex-wrap: wrap;
+}
+.col {
+  flex-basis: 50%;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  padding-inline: 5rem;
+  gap: 2rem;
+}
+.container h2 {
+  font-size: 2.5rem;
+  color: var(--blue-1);
+  font-weight: var(--fw-med);
+}
+.container p {
+  color: var(--Very-dark-grayish-blue);
+  line-height: 1.5;
+}
+.ctn {
+  color: var(--blue-1);
+  font-weight: var(--fw-med);
+  position: relative;
+  padding-inline: 0.5rem;
+}
+.ctn::after {
+  content: "";
+  position: absolute;
+  width: 8rem;
+  bottom: 0;
+  left: 0;
+
+  z-index: -1;
+
+  border-bottom: 7px solid rgba(255, 255, 0, 0.301);
+}
+.stacked {
+  display: grid;
+}
+.stacked > * {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+.stacked__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: end;
+  padding: 3rem;
+}
+
+.photo h3 {
+  text-align: center;
+  color: var(--photography-text);
+  font-size: 1.75rem;
+}
+.stacked__text p {
+  padding-inline: 5rem;
+  text-align: center;
+}
+.gd h3 {
+  text-align: center;
+  color: var(--graphic-design-text);
+  font-size: 1.75rem;
+}
+.testimonials {
+  padding-block: 10rem;
+  padding-inline: 7rem;
+}
+
+.testimonials__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding-block: 5rem;
+}
+.testimonials h3 {
+  text-align: center;
+  color: var(--Grayish-blue);
+  letter-spacing: 0.5rem;
+}
+.box {
+  text-align: center;
+}
+.box p {
+  padding-block: 3rem;
+  color: var(--Very-dark-grayish-blue);
+  font-weight: var(--fw-small);
+}
+.box span {
+  color: var(--Grayish-blue);
+}
+.box img {
+  border-radius: 50%;
+  scale: 0.65;
+  margin-inline: auto;
+}
+.box h4 {
+  font-weight: var(--fw-large);
+  color: var(--blue-1);
+  font-size: 1.2s5rem;
+  padding-bottom: 1rem;
+}
+.projects {
+}
+.projects__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+footer {
+  background-color: var(--footer);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 3rem;
+  gap: 2rem;
+  min-height: 40vh;
+  opacity: 0.8;
+}
+.links li a {
+  color: black;
+  font-weight: var(--fw-large);
+}
+.footer__logo h3 {
+  font-size: 2rem;
+}
+.socials {
+  display: flex;
+  gap: 2rem;
+}
+.fa-brands {
+  color: black;
+  font-size: 2rem;
+  font-weight: var(--fw-large);
+}
+/*=============== BREAKPOINTS ===============*/
+
+@media (max-width: 568px) {
+  .container,
+  .home {
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .projects__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .text {
+    padding-block: 3rem;
+  }
+  .stacked__text {
+    padding-bottom: 1.5rem;
+    padding-inline: 0.5rem;
+  }
+
+  .arrow__home {
+    padding: 3rem;
+  }
+  .stacked img {
+    object-position: center;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .home__title {
+    display: none;
+  }
+  nav {
+    height: 350px;
+
+    position: relative;
+  }
+  .hamburger {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    display: block;
+    cursor: pointer;
+  }
+  .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .nav__links {
+    position: fixed;
+    right: 50px;
+    left: 150px;
+    padding: 3rem;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+
+    margin-top: 2rem;
+    transform: translateX(-200%);
+  }
+  .nav__links[data-visible="true"] {
+    transform: translateX(0%);
+  }
+
+  .nav__links ul {
+    flex-direction: column;
+  }
+  .nav__links ul li a {
+    color: rgba(0, 0, 0, 0.541);
+    font-size: 1.25rem;
+  }
+  .nav__links .btn {
+    background-color: var(--Yellow);
+    padding: 1rem 2rem;
+    border-radius: 30px;
+  }
+
+  .testimonials__container {
+    grid-template-columns: 1fr;
+  }
+  .services .container {
+    flex-direction: column;
+  }
+  .col:nth-child(3) {
+    order: 2;
+  }
+  .home__title {
+    font-size: 0.5rem;
+    line-height: 2;
+    font-weight: var(--fw-large);
+    padding: 0;
+  }
+  .home__title h1 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 1200px) {
+  .projects__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr));
+  }
+  .home__title {
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+  }
+  .services .container img {
+    height: 100%;
+    width: 100%;
+  }
+  .text {
+    padding-bottom: 1rem;
+    padding-top: 2.5rem;
+    padding-inline: 2rem;
+  }
+  .col p {
+    padding: 0;
+  }
+}
